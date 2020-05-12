@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <!-- for azure:  all these links must use https, not http -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>My First jQuery Mobile Application</title>
+   <link rel="stylesheet" type="text/css" href="https://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+   <script src="https://code.jquery.com/jquery-1.8.2.min.js"> </script>
+   <script src="https://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+   <script src="/main.js"></script>
+</head>
+
+<body>
+   <!------------------------------------------------------------>
+   <!-------------------------- Page 1 -------------------------->
+   <!------------------------------------------------------------>
+   <div data-role="page" id="Home">
+
+      <div data-role="header" data-theme='b'>
+         <h1>Travis's budget/spending website</h1>
+         <!-- navbar -->
+         <div data-role="navbar">
+            <ul>
+               <li><a href="#Overview" data-icon="grid">Budget Overview</a> </li>
+               <li><a href="#AddRemove" data-icon="edit">Add/Remove Items</a> </li>
+               <li><a href="#Categories" data-icon="gear">Edit Budget Categories</a> </li>
+            </ul>
+         </div>
+         <!-- /navbar -->
+      </div>
+
+      <div data-role="content" data-theme='c'>
+         <h2>My Budget App</h2>
+         <p>Display a welcome message</p>
+
+      </div>
+
+      <div data-role="footer" data-theme='b'>
+         <h1>Copywrite Travis 2020</h1>
+      </div>
+
+   </div>
+
+   <!------------------------------------------------------------>
+   <!-------------------------- Page 2 -------------------------->
+   <!------------------------------------------------------------>
+   <div data-role="page" id="Overview">
+
+      <div data-role="header" data-theme='b'>
+         <h1>Budget Overview</h1>
+         <!-- navbar -->
+         <div data-role="navbar">
+            <ul>
+               <li><a href="#Home" data-icon="home">Home</a> </li>
+               <li><a href="#AddRemove" data-icon="gear">Add/Remove Items</a> </li>
+               <li><a href="#Categories" data-icon="gear">Edit Budget Categories</a> </li>
+            </ul>
+         </div>
+         <!-- /navbar -->
+      </div>
+
+      <div data-role="content" data-theme='c'>
+         <h2>Show an overview of your budget</h2>
+         <div>
+            Display a bar graph of the top 10 categories by percentage of budget used.</br>
+            Display a pie chart for all categories, does not show values</br>
+            Display a small bar graph (total $$$ spent this month vs. total $$$ made this month)</br>
+            Display a transaction log (deposits/withdrawals) (if possible, enable the user to filter the results)</br>
+         </div>
+      </div>
+
+      <div data-role="footer" data-theme='b'>
+         <h1>Copywrite Travis 2020</h1>
+      </div>
+
+   </div>
+
+   <!------------------------------------------------------------>
+   <!-------------------------- Page 3 -------------------------->
+   <!------------------------------------------------------------>
+   <div data-role="page" id="AddRemove">
+
+      <div data-role="header" data-theme='b'>
+         <h1>Add/Remove Items</h1>
+         <!-- navbar -->
+         <div data-role="navbar">
+            <ul>
+               <li><a href="#Home" data-icon="home">Home</a> </li>
+               <li><a href="#Overview" data-icon="grid">Budget Overview</a> </li>
+               <li><a href="#Categories" data-icon="gear">Edit Budget Categories</a> </li>
+            </ul>
+         </div>
+         <!-- /navbar -->
+      </div>
+
+      <div data-role="content" data-theme='d'>
+         <h2>Display 2 buttons, one to add and one to remove a entry. Each button will display their respective form</h2>
+         form 1 (Add): Use a GUID as the key, display fields necessary to record a transaction</br>
+         form 2 (Delete): Display the list of entries, select 1 to delete (if possible, I want to implement batch deleting)</br>
+      </div>
+
+      <div data-role="footer" data-theme='b'>
+         <h1>Copywrite Travis 2020</h1>
+      </div>
+
+   </div>
+
+   <!------------------------------------------------------------>
+   <!-------------------------- Page 4 -------------------------->
+   <!------------------------------------------------------------>
+   <div data-role="page" id="Categories">
+
+      <div data-role="header" data-theme='b'>
+         <h1>Edit Budget Categories</h1>
+         <!-- navbar -->
+         <div data-role="navbar">
+            <ul>
+               <li><a href="#Home" data-icon="home">Home</a> </li>
+               <li><a href="#Overview" data-icon="grid">Budget Overview</a> </li>
+               <li><a href="#AddRemove" data-icon="edit">Add/Remove Items</a> </li>
+            </ul>
+         </div>
+         <!-- /navbar -->
+      </div>
+
+      <div data-role="content" data-theme='d'>
+         <h2>Similar to my add/remove page, Display 2 buttons, one to add and one to remove a category. Each button will display their respective form</h2>
+         form 1 (Add): Use a GUID as the key, display fields necessary to create a category (name, budget target, etc)</br>
+         form 2 (Delete): Display the list of categories, select 1 to delete (no batch deleting here)</br>
+      </div>
+
+      <div data-role="footer" data-theme='b'>
+         <h1>Copywrite Travis 2020</h1>
+      </div>
+
+   </div>
+</body>
+</html>
