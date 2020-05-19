@@ -8,7 +8,7 @@
    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
    <script src="https://code.jquery.com/jquery-1.8.2.min.js"> </script>
    <script src="https://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
-   <script src="/main.js"></script>
+   <script src="main.js"></script>
 </head>
 
 <body>
@@ -53,7 +53,7 @@
          <div data-role="navbar">
             <ul>
                <li><a href="#Home" data-icon="home">Home</a> </li>
-               <li><a href="#AddRemove" data-icon="gear">Add/Remove Items</a> </li>
+               <li><a href="#AddRemove" data-icon="edit">Add/Remove Items</a> </li>
                <li><a href="#Categories" data-icon="gear">Edit Budget Categories</a> </li>
             </ul>
          </div>
@@ -125,9 +125,27 @@
       </div>
 
       <div data-role="content" data-theme='d'>
-         <h2>Similar to my add/remove page, Display 2 buttons, one to add and one to remove a category. Each button will display their respective form</h2>
+         <h2></h2>
+         <!-- <h2>Similar to my add/remove page, Display 2 buttons, one to add and one to remove a category. Each button will display their respective form</h2>
          form 1 (Add): Use a GUID as the key, display fields necessary to create a category (name, budget target, etc)</br>
-         form 2 (Delete): Display the list of categories, select 1 to delete (no batch deleting here)</br>
+         form 2 (Delete): Display the list of categories, select 1 to delete (no batch deleting here)</br> -->
+
+         <div class="form-style-1">
+            <form id="form-1">
+               <label for="budgetName">Category Name:</label>
+               <input type="text" id="budgetName" name="budgetName" />
+   
+               <label for="budgetTarget">Category Target:</label>
+               <input type="number" id="budgetTarget" name="budgetTarget" />
+
+               <input type="button" id="addCategory" value="Add Category">
+            </form>
+         </div>
+         <div id="displayArea">
+            <ul id="categoryList">
+               
+            </ul>
+         </div>
       </div>
 
       <div data-role="footer" data-theme='b'>
